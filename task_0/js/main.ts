@@ -23,6 +23,19 @@ let studentsList: Student[] = [student1, student2];
 
 const table = document.createElement("table");
 const tbody = document.createElement("tbody");
+const theader = document.createElement("thead");
+const headerRow = document.createElement("tr");
+
+const headerTitle: string[] = ['Firstname', 'Location'];
+
+for (const title of headerTitle) {
+    const headerElement = document.createElement("th");
+    headerElement.textContent = title;
+
+    headerRow.appendChild(headerElement);
+}
+
+table.appendChild(headerRow);
 
 for(const student of studentsList) {
     const row = document.createElement("tr");
@@ -40,5 +53,6 @@ for(const student of studentsList) {
 }
 
 table.appendChild(tbody);
+table.setAttribute("border", "1");
 
 document.body.appendChild(table);
