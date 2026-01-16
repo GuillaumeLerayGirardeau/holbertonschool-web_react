@@ -1,3 +1,4 @@
+// Student interface
 interface Student {
     firstName: string;
     lastName: string;
@@ -5,6 +6,7 @@ interface Student {
     location: string
 }
 
+// Creation of two students based on the Student interface
 let student1: Student = {
     firstName: 'John',
     lastName: 'Doe',
@@ -19,8 +21,10 @@ let student2: Student = {
     location: 'Boston',
 }
 
+// Creation of a list of two students
 let studentsList: Student[] = [student1, student2];
 
+// Create a table to display the students informations
 const table = document.createElement("table");
 const tbody = document.createElement("tbody");
 const theader = document.createElement("thead");
