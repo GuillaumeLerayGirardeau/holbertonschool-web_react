@@ -83,3 +83,28 @@ function executeWork(employee: Teacher | Director): string {
 executeWork(createEmployee(200));
 executeWork(createEmployee(1000));
 */
+
+
+// Creation of the string literal type Subject
+type Subjects = 'Math' | 'History';
+
+// Function teachClass that return a different string if todayClass is either Maths or History
+function teachClass(todayClass: Subjects): string {
+    if(todayClass === 'Math') {
+        /* Test script
+        console.log('Teaching Math')
+        // Expected result => Teaching Math
+        */
+        return ('Teaching Math');
+    }
+    /* Test script
+    console.log('Teaching History')
+    // Expected result => Teaching History
+    */
+    return ('Teaching History');
+}
+
+/* Test script for teachClass, remove comments in function teachClass tu use them
+teachClass('Math');
+teachClass('History');
+*/
