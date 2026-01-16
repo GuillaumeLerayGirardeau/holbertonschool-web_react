@@ -48,11 +48,38 @@ function createEmployee(salary: (number | string)): (TeacherInterface | Director
     return new Director();
 }
 
-/* test script 
+/* test script for createEmployee
 console.log(createEmployee(200));
 Teacher
 console.log(createEmployee(1000));
 Director
 console.log(createEmployee('$500'));
 Director
+*/
+
+
+// function to check if the current employee is an instance of a teacher or a director
+function isDirector(employee: Teacher | Director): employee is Director {
+    return (employee instanceof Director)
+}
+
+// Function to execute different work if the employee is a teacher or a director
+function executeWork(employee: Teacher | Director): string {
+    if(isDirector(employee)) {
+        /* Test script
+        console.log(employee.workDirectorTasks());
+        // Expected result => Getting to director tasks
+        */
+        return employee.workDirectorTasks();
+    }
+    /* Test script
+    console.log(employee.workTeacherTasks());
+    // Expected result => Getting to work
+    */
+    return employee.workTeacherTasks();
+}
+
+/* Test script for executeWork, remove comments in function executeWork tu use them
+executeWork(createEmployee(200));
+executeWork(createEmployee(1000));
 */
