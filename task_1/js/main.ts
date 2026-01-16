@@ -38,7 +38,7 @@ interface StudentConstructorInterface {
     new (firstName: string, lastName: string): StudentClassInterface;
 }
 
-// Classe StudentClass, implémentant une interface pour la classe et le constructeur
+// Classe StudentClass, implémentant une interface
 class StudentClass implements StudentClassInterface {
     constructor(public firstName: string, public lastName: string) {}
 
